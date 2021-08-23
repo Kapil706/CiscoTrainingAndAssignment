@@ -7,10 +7,11 @@ public class NestedTry {
          
 		try{
 			checkException();
-		}
-		catch(ArithmeticException e){
 			
+		}catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println(e.getMessage());
 		}
+		
 		finally
 		{
 			System.out.println("Finally Outside method");
@@ -18,16 +19,12 @@ public class NestedTry {
 	}
 	
 	public static void checkException(){
-		try{
-			int res = 3/0;
+	
+			int[] ar = new int[5];
 			
-		}
-		catch(){
-			
-		}
-		finally{
-			System.out.println("Finally inside method");
-		}
+			System.out.println(ar[7]);
+	
+		
 	}
 
 }
